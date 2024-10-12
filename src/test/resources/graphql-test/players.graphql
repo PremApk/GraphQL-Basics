@@ -1,0 +1,39 @@
+query FetchPlayers {
+    fetchPlayers {
+        id
+        name
+        team
+    }
+}
+
+query FetchPlayerById($id: Int) {
+    fetchPlayerById(id: $id) {
+        id
+        name
+        team
+    }
+}
+
+mutation CreatePlayer($name: String, $team: Team) {
+    createPlayer(name: $name, team: $team) {
+        id
+        name
+        team
+    }
+}
+
+mutation UpdatePlayer($id: ID, $name: String, $team: Team) {
+    updatePlayer(id: $id, name: $name, team: $team) {
+        id
+        name
+        team
+    }
+}
+
+mutation DeletePlayer($id: ID) {
+    deletePlayer(id: $id) {
+        id
+        name
+        team
+    }
+}
